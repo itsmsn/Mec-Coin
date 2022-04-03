@@ -1,0 +1,15 @@
+/* Student */
+.student {
+	.makale__gorsel {
+		img {
+			@include medya(pc) {
+				left: -15rem;
+			}
+
+			@include medya(tablet) {
+				left: -10rem;
+			}
+		}
+	}
+}
+/* Student SON */

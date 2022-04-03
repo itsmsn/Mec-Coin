@@ -1,0 +1,60 @@
+/* Project İnfo */
+#project-info {
+	.header {
+		height: 100vh;
+
+		video,
+		&__gorsel {
+			object-fit: cover;
+		}
+
+		&__icerik {
+			@include flex-column;
+			justify-content: center;
+			align-items: flex-start;
+			position: absolute;
+			inset: 0;
+			@include padding(3rem 10rem);
+			margin: auto;
+			width: 100%;
+			z-index: 2;
+
+			@include medya(tablet) {
+				@include padding(3rem 2rem);
+			}
+
+			> * {
+				max-width: 40rem;
+			}
+		}
+	}
+	.metaverse {
+		@include medya(pc) {
+			@include margin-bottom(20rem);
+		}
+	}
+	.makale {
+		img,
+		svg {
+			@include medya(pc) {
+				right: -10rem;
+				transform: scale(0.9);
+			}
+		}
+
+		&.yatirimci {
+			img,
+			svg {
+				@include medya(pc) {
+					right: -10rem;
+					transform: scale(0.7);
+				}
+				@include medya(tablet) {
+					right: -7rem;
+					transform: scale(0.5);
+				}
+			}
+		}
+	}
+}
+/* Project İnfo SON */

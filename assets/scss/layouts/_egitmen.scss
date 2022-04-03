@@ -1,0 +1,13 @@
+/* Egitmen */
+.egitmen {
+
+	&__paragraflar {
+		columns: 2;
+		column-gap: 5rem;
+
+		@include medya(tablet) {
+			columns: 1;
+		}
+	}
+}
+/* Egitmen SON */

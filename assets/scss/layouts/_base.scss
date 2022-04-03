@@ -1,0 +1,48 @@
+/* Base */
+*::selection {
+	background-color: $mor;
+	color: $beyaz;
+}
+
+* {
+	scroll-margin-top: 10rem;
+}
+
+html {
+	@include medya(laptop) {
+		@include font-size(14px);
+	}
+}
+
+body {
+	background-color: $ap;
+	width: 100%;
+	min-height: 100vh;
+}
+
+section,
+nav {
+	$top-bottom: 7rem;
+	$left-right: 10rem;
+	@include padding-top($top-bottom);
+	@include padding-bottom($top-bottom);
+	@include padding-left($left-right);
+	@include padding-right($left-right);
+
+	$top-bottom: $top-bottom * 2;
+	@at-root main section:nth-of-type(1) {
+		@include padding-top($top-bottom);
+	}
+
+	@include medya(telefon) {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+	max-width: 1920px;
+	margin: auto;
+}
+
+.--kapali {
+	display: none !important;
+}
+/* Base SON */

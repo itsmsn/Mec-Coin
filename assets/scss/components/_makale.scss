@@ -1,0 +1,83 @@
+/* Makale */
+article {
+	@include medya(pc, min) {
+		max-width: 40rem;
+		width: 60%;
+	}
+}
+.makale {
+	@include flex-row;
+	justify-content: space-between;
+	align-items: center;
+	gap: 3rem;
+	position: relative;
+	overflow: hidden;
+
+	&__gorsel {
+		text-align: center;
+		width: fit-content;
+
+		@include medya(pc) {
+			position: absolute;
+			width: 100%;
+		}
+		@include medya(pc, min) {
+			align-self: center;
+		}
+
+		img,
+		svg {
+			max-width: 100%;
+
+			@include medya(pc) {
+				filter: opacity(0.2);
+				height: 100%;
+				position: relative;
+				right: -15rem;
+				transform: scale(1.5);
+			}
+
+			@include medya(tablet) {
+				right: -10rem;
+			}
+
+			@include medya(pc, min) {
+				max-height: 50rem;
+			}
+		}
+	}
+
+	&__icerik {
+		z-index: 2;
+		@include medya(pc, min) {
+			max-width: 50rem;
+		}
+	}
+
+	&__madde {
+		@include margin(2rem 0);
+
+		p {
+			@include margin(2rem 0);
+			@include font-size(1.25rem);
+			display: flex;
+
+			&:hover {
+				&::before {
+					background-color: $mor;
+				}
+			}
+
+			&::before {
+				content: "";
+				padding: 0.7rem;
+				margin: 0.1rem 1rem 1rem 0;
+				width: 1.2rem;
+				height: 1.2rem;
+				background-color: $pembe;
+				border-radius: 50%;
+			}
+		}
+	}
+}
+/* Makale SON */

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="406" height="537" fill="none">
+	<g fill="#E28FF3">
+		<path d="M26 175h103v269H26z" />
+		<path d="M70 108h15v403H70z" />
+	</g>
+	<g fill="#E28FF3">
+		<path d="M151 131h103v269H151z" />
+		<path d="M195 64h15v403h-15z" />
+	</g>
+	<g fill="#E28FF3">
+		<path d="M277 93h103v269H277z" />
+		<path d="M321 26h15v403h-15z" />
+	</g>
+</svg>

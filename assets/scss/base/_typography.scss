@@ -1,0 +1,53 @@
+/* Typography */
+@use "../utils/variables";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+	font-family: "Inter", sans-serif;
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $beyaz;
+	text-transform: capitalize;
+	font-weight: 600;
+
+	span {
+		font-size: inherit;
+		letter-spacing: inherit;
+		color: $pembe;
+
+		&::selection{
+			background-color: $beyaz;
+			color: currentColor;
+		}
+	}
+}
+
+h1 {
+	@include font-size(2.5rem);
+	@include margin-bottom(1rem);
+}
+
+h2{
+	@include margin-bottom(1rem);
+}
+
+h3{
+	@include margin(.5rem 0);
+	@include font-size(1.25rem);
+}
+
+p,
+span {
+	@include font-size(1rem);
+	color: $beyaz;
+	letter-spacing: 1px;
+}
+/* Typography SON */

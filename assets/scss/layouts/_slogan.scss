@@ -1,0 +1,30 @@
+/* Slogan */
+.slogan {
+	position: relative;
+
+	article {
+		margin: auto;
+
+		h1,
+		p {
+			text-align: center;
+		}
+
+		p {
+			max-width: 40rem;
+		}
+	}
+
+	&__ap {
+		position: absolute;
+		top: 30%;
+		left: 0;
+		z-index: -1;
+
+		@include medya(telefon) {
+			top: 2rem;
+			left: -3rem;
+		}
+	}
+}
+/* Slogan SON */

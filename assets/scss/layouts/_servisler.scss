@@ -1,0 +1,59 @@
+/* Servisler */
+.servisler {
+	background: linear-gradient($ap 0%, #150822 50%, $ap 100%);
+	> div {
+		@include padding(3rem 1rem);
+	}
+	&__head {
+		text-align: center;
+		max-width: 40rem;
+		margin: auto;
+	}
+	&__icerik {
+		@include flex-row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: flex-start;
+		gap: 2rem;
+	}
+
+	h3 {
+		transition: all 0.2s ease-out;
+	}
+	&__servis {
+		@include flex-column;
+		@include padding(1rem);
+		text-align: center;
+		max-width: 20rem;
+		background-image: url("../img/brand-small.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: 0 85px;
+		min-height: 17rem;
+		justify-content: space-between;
+
+		&:hover {
+			h3 {
+				color: $pembe;
+			}
+			.servis-ikon {
+				transform: translateY(-10px);
+			}
+		}
+
+		.servis-ikon {
+			max-height: 10rem;
+			opacity: 0.9;
+			transition: all 0.2s ease-out;
+		}
+	}
+	&__footer {
+		.buton {
+			display: block;
+			margin: auto;
+			text-align: center;
+			@include font-size(1.25rem);
+		}
+	}
+}
+/* Servisler SON */

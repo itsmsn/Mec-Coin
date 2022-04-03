@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    var test = true; // False if contracts are on Mainnet
+    var contractAddressSale = '0x44f83bBcAa75EAE6fb2DF77F04EEe3C686AA9401';
+    var contractAddressToken = '0xfD34194C3d78fea42E62d09f2199374D27C9321b';
+  </script>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="navbar uppercase">
+      <ul>
+
+        <li><a href="http://metaenglishcity.com/">Tokenomics</a></li>
+        <li><a href="#news">Career</a></li>
+        <li><a href="#contact">Team</a></li>
+        <li><a href="http://metaenglishcity.com/info">Whitepaper</a></li>
+      </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="heading head">
+
+      <div class="hideit">
+        <center>
+          <div style="text-align: center">
+            <button id="connect" style="font-size: 12px">Connect</button> <button class="switch" id="addTestBSC"
+              style="font-size: 12px;">To BSC Testnet</button>
+            <span id="nometamask" class="err" style="display: none">Please install Metamask first...</span>
+            <div class="network small"><span id="curnet"><span class="err">Please use DApp browser/extension (e.g. <a
+                    target="_blank" href="https://metamask.io">Metamask</a>)</span></span> <span id="myAddr"></span>
+            </div>
+          </div>
+
+
+          <div style="text-align: center">
+            <p>Token info</p>
+            <p><span id="tokenName">BIGBUCKS</span> (<span class="tokenSymbol">BUCKS</span>)</p>
+            <p><a target="_blank" href="https://testnet.bscscan.com/token/0xfD34194C3d78fea42E62d09f2199374D27C9321b"
+                id="tokenAddress">0xfD34194C3d78fea42E62d09f2199374D27C9321b</a></p>
+            <!-- Reserved in case you want to show decimals and total supply: Decimals <span id="#tokenDecimals"></span> Total supply <span id="#tokenSupply"></span>-->
+            <p>Do not send BNB to the token contract!</p>
+            <p><button id="addToken" style="text-align: center">Add to Metamask</button> <button id="copyToken"
+                style="text-align: center">Copy address</button></p>
+          </div>
+        </center>
+      </div>
+
+      <center>
+        <h2>PRESALE</h2>
+      </center>
+    </div>
+    <div class="cont">
+      <div class="heading hea">
+        <center>
+          <p>MEC COIN (MECCO)</p>
+        </center>
+      </div>
+      <div class="line">
+        <span class="left"> Network </span>
+        <span class="right"> Binance Smart Chain </span>
+        <hr />
+      </div>
+
+      <div class="line">
+        <span class="left"> Total Supply </span>
+        <span class="right"> 10.0000.000 MECC </span>
+        <hr />
+      </div>
+
+      <div class="line">
+        <span class="left"> Presales </span>
+        <span class="right"> 5.0000.000 MECC </span>
+        <hr />
+      </div>
+
+      <div class="line">
+        <span class="left"> Exchange Rate </span>
+        <span class="right"> 1 BNB = 10.0000 MECC </span>
+        <hr />
+      </div>
+
+      <div class="line">
+        <span class="left"> Min Purchase </span>
+        <span class="right"> 0.01 BNB </span>
+        <hr />
+      </div>
+
+      <div class="line">
+        <span class="left"> Max Purchase </span>
+        <span class="right"> 5 BNB </span>
+        <hr />
+      </div>
+      <br>
+
+
+
+
+
+      <div style="text-align: center">
+        <p>1 BNB = <span class="rate">10000.0</span> <span class="tokenSymbol">BUCKS</span></p>
+        <p><input type="number" id="buyAmount" value="0" min="0"> BNB</p>
+        <div class="uppercase">
+        <p>You get: <span id="get">0</span> <span class="tokenSymbol">BUCKS</span></p>
+      </div>
+        <p><button id="buyBtn" class="btn block" style="text-align: center">BUY</button></p>
+        <div class="uppercase hideit">
+        <p>In my wallet: <span id="myTokens"></span> <span class="tokenSymbol">BUCKS</span></p>
+      </div>
+      </div>
+      <br>
+
+
+      <!-- <div class="endline abs">
+         <span class="left">Presale End</span>
+          <span class="right"> 30 </span>
+          <span class="right"> 13 </span>
+          <span class="right"> 23 </span>
+          <span class="right"> 60 </span>
+         </div> 
+         <br>
+
+         <div class="endline end">
+         <span class="right d"> Days </span>
+         <span class="right"> Hours </span>
+         <span class="right"> Minutes </span>
+         <span class="right"> Seconds </span>
+        </div>  -->
+
+    </div>
+
+    <div class="hideit">
+      <hr>
+      <div style="text-align: center">
+        <h1>Sale contract</h1>
+        <p>You can also buy tokens by sending BNB directly from your wallet to this contract<br>
+          (please increase gas limit to 200,000 or even more for tokens with special functions like autoLP, swaps, etc.)
+        </p>
+        <p><a href="https://testnet.bscscan.com/address/0x44f83bBcAa75EAE6fb2DF77F04EEe3C686AA9401" target="_blank"
+            id="saleAddress">0x44f83bBcAa75EAE6fb2DF77F04EEe3C686AA9401</a> <button id="copySale"
+            style="text-align: center">Copy address</button></p>
+        <div style="text-align: center" id="saleqr"></div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <script src='https://dappbuilder.org/js/jquery-3.6.0.min.js' type="text/javascript" charset="utf-8"></script>
+  <script src='https://dappbuilder.org/js/ethers-5.0.umd.min.js' type="text/javascript" charset="utf-8"></script>
+  <script src='https://dappbuilder.org/bsc/tokensale2/js/tokensale.ui.js' type="text/javascript"
+    charset="utf-8"></script>
+</body>
+
+</html>

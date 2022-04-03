@@ -1,0 +1,77 @@
+/* Footer */
+form {
+	@include flex-column;
+	flex-wrap: nowrap;
+	gap: 2rem;
+
+	label {
+		color: $beyaz;
+		text-transform: capitalize;
+		@include font-size(1rem);
+		cursor: pointer;
+	}
+
+	input,
+	textarea,
+	select,
+	.hayalet-input {
+		width: 100%;
+		caret-color: $beyaz;
+		border-radius: 5px;
+		outline: 0;
+		border: none;
+		margin: 0.5rem 0;
+		background-color: $mor;
+		@include padding(0.5rem 1rem);
+		@include font-size(1rem);
+		color: $beyaz;
+		&::placeholder {
+			color: $pembe;
+			text-transform: capitalize;
+		}
+		box-shadow: inset 0px 4px 13px rgba(0, 0, 0, 0.23);
+		&::selection {
+			background-color: $beyaz;
+			color: $mor;
+		}
+	}
+
+	select {
+		cursor: pointer;
+	}
+
+	button.buton {
+		border-radius: 5px;
+		background-color: $mor;
+		@include padding(1rem 2rem);
+
+		&:hover {
+			background-color: $pembe;
+		}
+	}
+
+	input[type="file"] {
+		display: none !important;
+	}
+
+	.hayalet-input {
+		@include flex-row;
+		gap: 1rem;
+		flex-wrap: nowrap;
+		align-items: center;
+
+		span {
+			@include text-truncate(1);
+		}
+
+		ion-icon {
+			font-size: 28px;
+		}
+	}
+
+	.form__eleman {
+		@include flex-column;
+		flex-wrap: nowrap;
+	}
+}
+/* Form SON */

@@ -1,0 +1,14 @@
+/* Err */
+.error {
+	@include flex;
+	padding: 0 !important;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+
+	img{
+		max-height: 100%;
+	}
+}
+/* Err SON */

@@ -1,0 +1,59 @@
+.mum-grafik {
+	&__mum {
+		path:not(.mum-grafik__fitil) {
+			fill: $mor;
+		}
+		.mum-grafik__fitil {
+			will-change: transform;
+			animation: anim1 2s ease-in-out infinite;
+			filter: drop-shadow( 0px 0px 5px $pembe );
+		}
+
+		&:nth-child(2) {
+			.mum-grafik__fitil {
+				will-change: transform;
+				animation: anim2 2.2s ease-in-out infinite;
+			}
+		}
+		&:nth-child(3) {
+			.mum-grafik__fitil {
+				will-change: transform;
+				animation: anim3 2.1s ease-in-out infinite;
+			}
+		}
+	}
+
+	@keyframes anim1 {
+		0% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(50px);
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
+	@keyframes anim2 {
+		0% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-40px);
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
+	@keyframes anim3 {
+		0% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(60px);
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
+}

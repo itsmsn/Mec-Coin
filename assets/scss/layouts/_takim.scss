@@ -1,0 +1,102 @@
+/* Takim */
+.takim {
+	&__ap {
+		@include padding(3rem);
+		@include padding-bottom(4rem);
+		@include flex-row;
+		align-items: center;
+		justify-content: space-between;
+		gap: 3rem;
+		position: relative;
+
+		background: linear-gradient(
+			0deg,
+			rgba(0, 0, 0, 0) 80%,
+			rgb(185, 114, 255) 100%
+		);
+		border-radius: 20px;
+		z-index: 5;
+
+		@include medya(pc) {
+			height: 100%;
+			align-items: flex-end;
+			justify-content: flex-end;
+			padding: 0;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 1px;
+			z-index: -1;
+			border-radius: 20px;
+
+			@include medya(pc) {
+				inset: 2px;
+			}
+
+			background: linear-gradient(180deg, #311953 0%, $ap 100%);
+		}
+	}
+
+	&__icerik {
+		text-align: right;
+		max-width: 40rem;
+		text-decoration: none;
+		width: 100%;
+		z-index: 2;
+		display: block;
+
+		@include medya(pc) {
+			position: absolute;
+			inset: 0;
+			z-index: 0;
+			max-width: unset;
+			width: 100%;
+			padding: 2rem;
+			@include flex-column;
+			align-items: flex-end;
+			justify-content: flex-end;
+		}
+
+		@include medya(telefon) {
+			padding: 1rem;
+		}
+
+		> span {
+			color: $pembe;
+			margin-top: 2rem;
+			text-transform: capitalize;
+			display: block;
+			@include font-size(1.2rem);
+			@include medya(tablet) {
+				margin-top: 1rem;
+			}
+		}
+
+		> p {
+			@include medya(tablet) {
+				@include text-truncate();
+			}
+		}
+
+		&:hover {
+			> span {
+				color: $mor;
+			}
+		}
+	}
+
+	span {
+		transition: all 0.2s ease-out;
+	}
+
+	&__gorsel {
+		width: 100%;
+
+		@include medya(pc) {
+			opacity: 0.3;
+		}
+	}
+}
+/* Takim SON */

@@ -1,0 +1,26 @@
+.steps {
+	&__gorsel {
+		width: 100%;
+		position: relative;
+
+		&--pc {
+			@include medya(laptop) {
+				display: none;
+			}
+		}
+		&--mobil {
+			@include min-medya(laptop) {
+				display: none;
+			}
+		}
+
+		.aktif__gorsel {
+			position: absolute;
+			top: 0;
+			overflow: hidden;
+			height: 0;
+			width: fit-content;
+			/* transition: height 50ms ease-in-out; */
+		}
+	}
+}

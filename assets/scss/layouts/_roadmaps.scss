@@ -1,0 +1,141 @@
+/* Roadmap */
+.roadmaps {
+	padding-left: 0;
+	padding-right: 0;
+
+	@include medya(pc) {
+		padding: 0;
+	}
+
+	&__head {
+		text-align: center;
+	}
+
+	h1 {
+		@include margin-bottom(3rem);
+	}
+
+	h2 {
+		margin: auto;
+		text-align: center;
+		color: $pembe;
+		display: block;
+		border-bottom: 3px solid #e28ff3;
+		width: fit-content;
+	}
+
+	.splide__slide {
+		@include min-medya(pc) {
+			padding: 0 6rem;
+		}
+	}
+
+	&__icerik {
+		@include padding(3rem);
+		@include flex-row;
+		position: relative;
+		flex-wrap: wrap;
+		width: calc(100% - 2rem - 4px);
+		margin: 1rem auto;
+		height: fit-content;
+		border-radius: 20px;
+		background: linear-gradient(120deg, #36184c 0%, #1e1132 100%);
+		gap: 2rem;
+
+		@include medya(laptop) {
+			@include padding(2rem 1rem);
+		}
+
+		.icerik-kolon {
+			@include flex-column;
+			gap: 2rem;
+			flex-grow: 1;
+			align-items: center;
+		}
+
+		p {
+			@include font-size(1.25rem);
+			display: flex;
+			color: $beyaz;
+
+			@include medya(laptop) {
+				@include font-size(1rem);
+			}
+
+			&:hover {
+				&::before {
+					background-color: $mor;
+				}
+			}
+
+			&::before {
+				content: "";
+				padding: 0.7rem;
+				margin: 0.1rem 1rem;
+				margin-left: 0;
+				width: 1.2rem;
+				height: 1.2rem;
+				background-color: $pembe;
+				transform: translateY(-2px);
+				border-radius: 50%;
+				transition: all 50ms ease-in-out;
+
+				@include medya(laptop) {
+					transform: translateY(-3px);
+				}
+			}
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			inset: -1px;
+			z-index: -1;
+			background: linear-gradient(150deg, #824cce, $ap 40%, #824cce 100%);
+			border-radius: 20px;
+
+			@include medya(pc) {
+				inset: -2px;
+			}
+		}
+	}
+
+	[disabled] {
+		svg {
+			fill: $mor !important;
+		}
+	}
+
+	.splide__arrows {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		justify-content: center;
+		flex-wrap: nowrap;
+		gap: 10rem;
+
+		@include medya(telefon) {
+			top: -2px;
+		}
+
+		.splide__arrow {
+			left: unset;
+			right: unset;
+			position: relative;
+			transform: translateY(0);
+
+			&:hover {
+				svg {
+					fill: $mor;
+				}
+			}
+
+			svg {
+				fill: $pembe;
+			}
+		}
+	}
+}
+/* Roadmap SON */

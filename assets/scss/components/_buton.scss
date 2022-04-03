@@ -1,0 +1,45 @@
+/* Butonlar */
+%buton {
+	@include padding(0.5rem 1rem);
+	@include margin(0.5rem);
+	@include font-size(1rem);
+	line-height: 1.5;
+	display: inline-flex;
+	justify-content: center;
+	white-space: nowrap;
+	text-decoration: none;
+	text-transform: capitalize;
+	outline: none;
+	border: 1px solid transparent;
+	background-color: $mor;
+	color: $beyaz;
+	cursor: pointer;
+	user-select: none;
+	vertical-align: middle;
+}
+
+.buton {
+	@extend %buton;
+	transition: all 0.2s ease-out;
+
+	&--hayalet {
+		color: $beyaz;
+		background-color: transparent;
+		border-color: transparent;
+		&:hover {
+			color: $pembe;
+		}
+	}
+
+	&--tip-2{
+		background-color: $pembe;
+		color: $beyaz;
+		border-radius: 1.25rem;
+	}
+
+	&:not(&--hayalet):hover {
+		color: $ap;
+		background-color: $pembe;
+	}
+}
+/* Butonlar SON */

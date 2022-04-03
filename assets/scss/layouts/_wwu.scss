@@ -1,0 +1,85 @@
+/* Work With Us */
+.wwu {
+	&__ap {
+		position: relative;
+
+		background: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0) 80%,
+			rgb(185, 114, 255) 100%
+		);
+		border-radius: 20px;
+		z-index: 2;
+
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 1px;
+			z-index: -1;
+			border-radius: 20px;
+
+			@include medya(pc) {
+				inset: 2px;
+				border-radius: 0px;
+			}
+
+			background: linear-gradient(0deg, #311953 0%, $ap 100%);
+		}
+	}
+
+	&__icerik {
+		text-align: center;
+		max-width: 40rem;
+		margin: auto;
+		width: 100%;
+		z-index: 2;
+		@include flex-column;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		inset: 0;
+		text-decoration: none;
+		@include padding(1rem 2rem);
+
+		&:hover {
+			> span {
+				background-color: $mor;
+				color: $ap;
+			}
+		}
+
+		> span.buton {
+			&:hover {
+				background-color: $mor;
+			}
+		}
+
+		@include medya(telefon) {
+			padding: 1rem;
+		}
+
+		p {
+			@include medya(telefon) {
+				@include text-truncate;
+			}
+		}
+
+		> span {
+			border-radius: 20px;
+			background-color: $pembe;
+			@include padding(1rem 2.5rem);
+			@include margin(1rem);
+			@include medya(tablet) {
+				display: none;
+			}
+		}
+	}
+
+	&__poster {
+		width: 100%;
+		height: auto;
+		object-fit: contain;
+		transform: translateY(3px);
+	}
+}
+/* Work With Us SON */

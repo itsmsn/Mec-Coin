@@ -1,0 +1,25 @@
+/* Footer */
+.footer{
+	@include flex-row;
+	background-color: #131425;
+	@include padding(1rem 2rem);
+	justify-content: space-around;
+	align-items: center;
+
+	.buton{
+		margin: 0;
+	}
+
+	&__sosyal{
+		@include flex-row;
+		gap: 2em;
+		transform: translateY(3px);
+	}
+
+	@include medya(laptop){
+		> *:not(.footer__cc){
+			display: none;
+		}
+	}
+}
+/* Footer SON */

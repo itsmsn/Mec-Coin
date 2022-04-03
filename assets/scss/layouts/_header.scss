@@ -1,0 +1,42 @@
+/* Header */
+.header {
+	position: relative;
+
+	@include medya(laptop, min) {
+		height: 100vh;
+	}
+
+	&__video,
+	&__gorsel,
+	video {
+		height: 100%;
+		width: 100%;
+	}
+
+	video,
+	&__gorsel {
+		@include medya(laptop, min) {
+			object-fit: cover;
+		}
+	}
+
+	&__video-filtre {
+		position: absolute;
+		inset: 0;
+		z-index: 2;
+		background: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 1) 0%,
+			rgba(0, 0, 0, 0) 30%
+		);
+		@include medya(laptop) {
+			background: linear-gradient(
+				180deg,
+				rgba(9, 9, 121, 0) 0%,
+				rgba(9, 9, 121, 0) 70%,
+				$ap 100%
+			);
+		}
+	}
+}
+/* Header SON */

@@ -1,0 +1,30 @@
+/* Hakkımızda */
+.hakkimizda {
+	&__madde {
+		@include margin(2rem 0);
+
+		p {
+			@include margin(2rem 0);
+			@include font-size(1.25rem);
+			display: flex;
+
+			&:hover {
+				&::before {
+					background-color: $mor;
+				}
+			}
+
+			&::before {
+				content: "";
+				padding: 0.7rem;
+				margin: 0.1rem 1rem 1rem 0;
+				width: 1.2rem;
+				height: 1.2rem;
+				background-color: $pembe;
+				border-radius: 50%;
+				transition: all 50ms ease-in-out;
+			}
+		}
+	}
+}
+/* Hakkımızda SON */

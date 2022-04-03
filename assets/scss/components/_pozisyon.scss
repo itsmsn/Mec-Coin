@@ -1,0 +1,62 @@
+.pozisyon {
+	border-radius: 5px;
+	overflow: hidden;
+
+	&.aktif {
+		.pozisyon__ikon {
+			transform: rotate(180deg);
+		}
+	}
+
+	&__buton {
+		@include padding(1rem 1.5rem);
+		@include flex-row;
+		align-items: center;
+		justify-content: space-between;
+		background-color: $mor;
+		cursor: pointer;
+	}
+
+	&__tipleri {
+		@include flex-row;
+		gap: 1rem;
+		margin-top: 0.5rem;
+	}
+
+	&__tipi {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		text-transform: capitalize;
+		white-space: nowrap;
+
+		&::before {
+			content: "";
+			width: 1rem;
+			display: inline-block;
+			height: 1rem;
+			background-color: $pembe;
+			border-radius: 50%;
+			margin-right: 0.5rem;
+		}
+	}
+
+	&__ikon {
+		@include font-size(2rem);
+		color: $pembe;
+		transform: rotate(0);
+		transition: transform 0.2s ease-out;
+		transform-origin: center;
+	}
+
+	&__bilgileri {
+		background-color: #4d2b59;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.2s ease-out;
+
+		p {
+			@include padding(1rem 1.5rem);
+		}
+	}
+}
